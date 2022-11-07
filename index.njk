@@ -1,0 +1,29 @@
+---
+layout: layouts/home.njk
+templateClass: home
+---
+<section class="s-profile">
+  <img src="https://via.placeholder.com/88" alt="" class="profile-img" loading="lazy" />
+  <div class="s-profile--copy">
+    <h1>Rob Hough</h1>
+    <p>Lead product designer for early-stage health startups</p>
+  </div>
+</section>
+<section>
+  <h2>About</h2>
+  <p>Currently, I'm working at Lantum. A healthcare startup bringing together clinicians and their managers onto one management platform.</p>
+</section>
+<section>
+  <h2>Projects</h2>
+  {% set projectList = collections.projects %}
+  {% include "projects.njk" %}  
+</section>
+<section>
+  <h2>Elsewhere</h2>
+  <ul class="list s-contact">    
+    <li>
+      <span>Email</span>
+      <a href="mailto:robhough@hey.com">robhough@hey.com</a>
+    </li>    
+  </ul>
+</section>

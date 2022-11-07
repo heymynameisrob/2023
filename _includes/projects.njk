@@ -1,0 +1,11 @@
+<ul class="list s-projects">
+  {% for project in projectList | reverse %}
+  <li>
+    <time>{{project.date | readableDate}}</time>
+    <div class="s-project--content">
+      <h3><a href={{project.url}}>{{project.data.title}}</a> <span>at</span> <a href="{{project.data.companyURL}}">{{project.data.company}}</a></h3>
+      <p>{{project.data.description}}</p>
+    </div>
+  </li>
+  {% endfor %}
+</ul>

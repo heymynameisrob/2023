@@ -1,0 +1,17 @@
+{
+  "name": "hmnir-2023",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "deploy": ""
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "luxon": "^3.1.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-anchor": "^8.6.5"
+  }
+}

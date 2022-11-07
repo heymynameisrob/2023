@@ -1,0 +1,15 @@
+{
+  "title": "Found It! Podcast – Startup Stories from Independent Entrepreneurs",
+  "url": "https://founditpodcast.com",
+  "description": "Found It! is a podcast all about founders and leaders of small, independent startups. We tell their against-all-odds tales, giving a voice to the thousands of visionaries build great products.",
+  "feed": {
+    "subtitle": "Found It! is a podcast all about founders and leaders of small, independent startups. We tell their against-all-odds tales, giving a voice to the thousands of visionaries build great products.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://founditpodcast.com"
+  },
+  "author": {
+    "name": "nuom",
+    "email": "rob.hough@nuom.co.uk"
+  }
+}
