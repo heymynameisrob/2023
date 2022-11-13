@@ -27,7 +27,7 @@
     window.cookieconsent.initialise({
     "palette": {
         "popup": {
-        "background": "#222"
+        "background": "#222",
         "text": "#fff"
         },
         "button": {
@@ -44,12 +44,18 @@
 </script>
   </head>
   <body>  
+    <div class="theme-btn--wrap">
+  <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+    Toggle Theme
+  </button>
+</div>
+    <div class="bg-fade"></div>
     
 <div class="l-outer l-home">  
   <main>
     <div class="content">
       <section class="s-profile">
-  <img src="https://via.placeholder.com/88" alt="" class="profile-img" loading="lazy" />
+  <img src="/static/img/profile.png" alt="" class="profile-img" loading="lazy" />
   <div class="s-profile--copy">
     <h1>Rob Hough</h1>
     <p>Lead product designer for early-stage health startups</p>
@@ -91,7 +97,8 @@
       </div>
     </footer>  
   </main>
-</div>              
+</div>          
+    <div class="bg-noise"></div>    
     <script src="/static/main.js" async></script>   
   </body>
 </html>

@@ -27,7 +27,7 @@
     window.cookieconsent.initialise({
     "palette": {
         "popup": {
-        "background": "#222"
+        "background": "#222",
         "text": "#fff"
         },
         "button": {
@@ -44,6 +44,12 @@
 </script>
   </head>
   <body>  
+    <div class="theme-btn--wrap">
+  <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+    Toggle Theme
+  </button>
+</div>
+    <div class="bg-fade"></div>
     
 <div class="l-outer l-page">
   <aside>
@@ -67,7 +73,8 @@
       </div>
     </footer>  
   </main>
-</div>              
+</div>          
+    <div class="bg-noise"></div>    
     <script src="/static/main.js" async></script>   
   </body>
 </html>
