@@ -4,11 +4,13 @@ function init(){
 }
 
 function toggleDarkMode() {    
-  const toggleTheme = document.getElementById('theme-toggle');
+  const toggleThemeButtons = document.querySelectorAll('[data-theme-toggle]');
 
-  toggleTheme.addEventListener('click', function(e) {
-    let currentTheme = document.documentElement.getAttribute('data-theme');
-    currentTheme === 'light' ? document.documentElement.setAttribute('data-theme', 'dark') : document.documentElement.setAttribute('data-theme', 'light');
+  toggleThemeButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      let currentTheme = document.documentElement.getAttribute('data-theme');
+      currentTheme === 'light' ? document.documentElement.setAttribute('data-theme', 'dark') : document.documentElement.setAttribute('data-theme', 'light');
+    });
   });
 }
 
