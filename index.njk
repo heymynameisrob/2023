@@ -9,15 +9,14 @@ templateClass: home
   alt="A picture of me shooting a bow and arrow, aged 7" 
   class="profile-img" 
   loading="lazy" />
-  <h1>Hey my name is Rob and I'm a product designer from Nottingham, England</h1>    
+  <h1>Hey my name is Rob and I'm lead product design at Lantum</h1>    
+  <a href="/about">Learn more</a>
 </section>
-<section>
+{# <section>
   <h2>About</h2>
-  <p>After designing for 10 years, I'm passionate about working with early-stage companies, partiularly on 0-1 projects. Good design can help bring them closer to their customers, accelerate growth, and ship quality products. Right now, I'm working at Lantum. A healthcare startup helping clinicians and their managers work better, together.</p>
-  <a href="mailto:robhough@hey.com">Contact</a>
-</section>
-<section>
-  <h2>Projects</h2>
+  <p>Designing for 10 years, I'm passionate about working with early-stage companies, partiularly on 0-1 projects. Good design can help bring them closer to their customers, accelerate growth, and ship quality products. Right now, I'm working at Lantum. A healthcare startup helping clinicians and their managers work better, together.</p>  
+</section> #}
+<section>  
   {% set projectList = collections.projects %}
   {% include "projects.njk" %}  
 </section>
