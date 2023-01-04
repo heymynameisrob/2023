@@ -4,16 +4,28 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy",
-    "deploy": ""
+    "dev:css": "postcss src/styles.css -o _site/styles.css --watch",
+    "dev:js": "terser src/main.js -o _site/main.js --watch",
+    "dev:eleventy": "npx @11ty/eleventy --serve",
+    "start": "run-p dev:*",
+    "build:css": "NODE_ENV=production postcss src/styles.css -o _site/styles.css",
+    "build:js": "terser src/main.js -o _site/main.js",
+    "build:eleventy": "npx @11ty/eleventy",
+    "build": "rm -rf _site && run-s build:*"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.13",
     "clean-css": "^5.3.1",
+    "cssnano": "^5.1.14",
+    "eleventy-plugin-postcss": "^1.0.4",
     "fs": "^0.0.1-security",
     "luxon": "^3.1.0",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.5",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.8",
+    "postcss-clean": "^1.2.2",
+    "postcss-cli": "^10.1.0",
     "terser": "^5.16.1"
   }
 }

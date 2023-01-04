@@ -1,5 +1,7 @@
 const { minify } = require("terser");
-const CleanCSS = require("clean-css");
+const postCss = require('postcss');
+const clean = require('postcss-clean');
+const autoprefixer = require("autoprefixer");
 
 module.exports = function (eleventyConfig) {
 
@@ -18,13 +20,25 @@ module.exports = function (eleventyConfig) {
     }
   });
 
-  eleventyConfig.addFilter("cssmin", function(code) {
-		return new CleanCSS({
-      compatibility: '*',
-      format: 'beautify'
-    }
-    ).minify(code).styles;
-	});
+  eleventyConfig.addNunjucksAsyncFilter('postcss', (cssCode, done) => {
+    postCss([
+      autoprefixer(),
+      clean()
+    ])
+    .process(css, { from: undefined })
+    .then(
+      r => done(null, r.css),
+      e => done(e, null)
+    )
+  })
+
+  // eleventyConfig.addFilter("cssmin", function(code) {
+	// 	return new CleanCSS({
+  //     compatibility: '*',
+  //     format: 'beautify'
+  //   }
+  //   ).minify(code).styles;
+	// });
 
   return {
     templateFormats: [
@@ -38,10 +52,11 @@ module.exports = function (eleventyConfig) {
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
 
-    // These are all optional, defaults are shown:
+    pathPrefix: "/", // useful for GitHub pages
+
     dir: {
-      input: ".",
-      includes: "_includes",
+      input: "src",
+      includes: "_includes",            
       data: "_data",
       output: "_site"
     }
