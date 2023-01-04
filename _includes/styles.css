@@ -141,7 +141,7 @@ body {
   scroll-behavior: smooth;
 	color:var(--text-primary);
 	font-family:var(--font-primary);
-	font-size:1rem;
+	font-size:1.25rem;
 	font-weight:300;
 	line-height: var(--line-height);
 	background-color:#f5f5f5;
@@ -459,8 +459,7 @@ a[href^="https:"]::after {
 
 
 /* Template : Home */
-.l-home p {
-	font-size:1.125rem;
+.l-home p {	
 	line-height:1.7;
 }
 @media (min-width:48rem) {
@@ -494,85 +493,6 @@ a[href^="https:"]::after {
 	transition: all .2s ease-in-out;
 }
 
-.s-projects {
-	display:grid;
-	grid-template-columns: repeat(1, 1fr);
-	grid-gap: 1rem;
-}
-.s-projects article {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow:column;	
-	border-radius: .75rem;
-	padding: 1.5rem;
-	border:1px solid var(--gray-100);
-	background: var(--bg-color);
-	text-decoration: none;
-	backdrop-filter: blur(10px);
-	text-align: center;
-}
-[data-theme="dark"] .s-projects article {	
-	border:1px solid rgba(255,255,255,0.1);
-	background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 100%);
-}
-@media(min-width:48rem) {
-	.s-projects article {
-		border-radius: 1rem;
-		padding: 3rem;
-	}
-}
-
-.s-projects--content {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow:column;	
-}
-.s-projects--content > * + * {
-	margin-bottom:1rem;
-}
-.s-projects time {
-	text-transform: uppercase;
-	color:var(--text-tertiary);
-	font-size: 0.75rem;
-}
-.s-projects h2 {
-	font-size: 1.25rem;
-	color:var(--text-primary);
-	font-weight: 600;	
-	max-width: 25ch;
-	margin-left:auto;
-	margin-right:auto;
-}
-@media(min-width:48rem) {
-	.s-projects h2 {
-		font-size: 1.5rem;
-	}
-}
-.s-projects a {
-	border-color:var(--text-primary);
-	margin-top:2rem;
-}
-
-
-/* Template : Page */
-.l-page header {
-	display: grid;
-	place-items: center;
-	text-align:center;
-	margin-bottom:var(--margin-y);
-	margin-top:var(--margin-y);
-	/* grid-column: span 3;	 */
-}
-
-.l-page header h1 {
-	font-size:2rem;
-	font-weight:bold;
-}
-
-
 /* Helpers */
 .sr-only {
 	position: absolute;
@@ -586,6 +506,16 @@ a[href^="https:"]::after {
 }
 
 /* Motion */
+@media screen and
+  (prefers-reduced-motion: reduce), 
+  (update: slow) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important; /* Hat tip Nick/cssremedy (https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/#comment-1700170) */
+    transition-duration: 0.001ms !important;
+  }
+}
+
 .l-home .s-profile--container,
 .l-home p {
 	animation: homeFadeIn 1s ease-in;

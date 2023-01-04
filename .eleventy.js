@@ -1,25 +1,30 @@
-const { DateTime } = require("luxon");
-const fs = require("fs");
-const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
+const { minify } = require("terser");
+const CleanCSS = require("clean-css");
 
 module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("static/");
-
-  eleventyConfig.addFilter("readableDate", dateObj => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("LLL yy");
+  eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
+    code,
+    callback
+  ) {
+    try {
+      const minified = await minify(code);
+      callback(null, minified.code);
+    } catch (err) {
+      console.error("Terser error: ", err);
+      // Fail gracefully.
+      callback(null, code);
+    }
   });
 
-  eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
-
-  let markdownLibrary = markdownIt({
-    html: true,
-    breaks: true,
-    linkify: true
-  })
-  eleventyConfig.setLibrary("md", markdownLibrary);
-
+  eleventyConfig.addFilter("cssmin", function(code) {
+		return new CleanCSS({
+      compatibility: '*',
+      format: 'beautify'
+    }
+    ).minify(code).styles;
+	});
 
   return {
     templateFormats: [

@@ -36,7 +36,7 @@ function setTheme(){
 }
 
 function getNowPlaying() {
-  fetch('http://localhost:5050')
+  fetch('https://hmnir-spotify-now-playing.onrender.com/')
   .then(response => response.json())
   .then(data => {
     const { isPlaying, name, artist, title, albumImageUrl, songUrl } = data;
@@ -54,11 +54,6 @@ function getNowPlaying() {
         ${title} - ${artist}
       </a>
     `;
-    // trackImage.innerHTML = `
-    //   <a href="${songUrl}" target="_blank" rel="noopener noreferrer">
-    //     <img src="${albumImageUrl}" alt="${artist}" />
-    //   </a>
-    // `;
   });
 }
 
