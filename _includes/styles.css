@@ -207,20 +207,6 @@ a[href^="https:"]::after {
 }
 
 /* Site layout */
-.bg-noise {
-	position:fixed;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	opacity:0.1;
-	mix-blend-mode: soft-light;
-	background:url('/static/img/noise.png') no-repeat center center fixed;
-	background-size:contain;
-	pointer-events: none;
-	z-index:0;
-}
-
 .bg-fade {
 	position:fixed;
 	top:0;
@@ -244,7 +230,7 @@ a[href^="https:"]::after {
 [data-theme="dark"] .bg-fade::after {
 	background-image:linear-gradient(40deg, rgba(0,0,0,1), rgba(0,0,0,0.5));
 }
-.l-outer {
+main {
 	position: relative;
 	display:block;	
 	max-width:48rem;
@@ -253,12 +239,25 @@ a[href^="https:"]::after {
 	margin:0 auto;
 	padding:var(--margin-y) var(--margin-x);	
 }
-@media (min-width: 768px) {
-	.l-outer {
-		padding:calc(var(--margin-y) * 3) var(--margin-x);
+@media(min-width:48rem) {
+	main {
+		padding:10vh var(--margin-x);	
 	}
 }
 
+main p {	
+	line-height:1.7;
+}
+@media (min-width:48rem) {
+	main p {
+		font-size:1.75rem;
+	}
+}
+
+main section p + a, 
+main section h2 + p {
+	margin-top:1rem;
+}
 
 /* Components */
 .btn {
@@ -458,20 +457,6 @@ a[href^="https:"]::after {
 
 
 /* Template : Home */
-.l-home p {	
-	line-height:1.7;
-}
-@media (min-width:48rem) {
-	.l-home p {
-		font-size:1.75rem;
-	}
-}
-
-.l-home section p + a, 
-.l-home section h2 + p {
-	margin-top:1rem;
-}
-
 .s-profile--container {
 	position:relative;
 	display:inline-flex;

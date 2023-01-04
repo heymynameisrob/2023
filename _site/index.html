@@ -285,19 +285,6 @@ a[href^="https:"]::after {
 .space-y.space-y--lg > * + * {
   margin-top: var(--margin-y)
 }
-.bg-noise {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: .1;
-  mix-blend-mode: soft-light;
-  background: url('/static/img/noise.png') no-repeat center center fixed;
-  background-size: contain;
-  pointer-events: none;
-  z-index: 0
-}
 .bg-fade {
   position: fixed;
   top: 0;
@@ -321,7 +308,7 @@ a[href^="https:"]::after {
 [data-theme=dark] .bg-fade::after {
   background-image: linear-gradient(40deg,#000,rgba(0,0,0,.5))
 }
-.l-outer {
+main {
   position: relative;
   display: block;
   max-width: 48rem;
@@ -330,10 +317,22 @@ a[href^="https:"]::after {
   margin: 0 auto;
   padding: var(--margin-y) var(--margin-x)
 }
-@media (min-width:768px) {
-  .l-outer {
-    padding: calc(var(--margin-y) * 3) var(--margin-x)
+@media(min-width:48rem) {
+  main {
+    padding: 10vh var(--margin-x)
   }
+}
+main p {
+  line-height: 1.7
+}
+@media (min-width:48rem) {
+  main p {
+    font-size: 1.75rem
+  }
+}
+main section h2 + p,
+main section p + a {
+  margin-top: 1rem
 }
 .btn {
   display: inline-flex;
@@ -367,7 +366,6 @@ a[href^="https:"]::after {
 .theme-toggle--wrap {
   top: 0;
   right: 0;
-  display: flex;
   padding: 1rem
 }
 .theme-toggle {
@@ -518,18 +516,6 @@ a[href^="https:"]::after {
   transform: translate3d(0,0,0);
   transition: all .25s ease-in-out;
   transition-delay: 0.25s
-}
-.l-home p {
-  line-height: 1.7
-}
-@media (min-width:48rem) {
-  .l-home p {
-    font-size: 1.75rem
-  }
-}
-.l-home section h2 + p,
-.l-home section p + a {
-  margin-top: 1rem
 }
 .s-profile--container {
   position: relative;
@@ -710,30 +696,23 @@ a[href^="https:"]::after {
 </div>
     <div class="bg-fade"></div>
     
-<div class="l-outer l-home">  
-  <main>
-    <div class="s-profile">
-      <div class="s-profile--container">
-        <img 
-        src="/static/img/profile.png" 
-        srcset="/static/img/profile@2x.png 2x" 
-        alt="A picture of me shooting a bow and arrow, aged 7" 
-        class="profile-img" 
-        loading="lazy" />
-        
-        <div class="s-now-playing"><span>🎧</span><div id="np-info">Not playing anything</a></div>
-      </div>
-      
-    </div>
-      
+<main>
+  <div class="s-profile">
+    <div class="s-profile--container">
+      <img 
+      src="/static/img/profile.png" 
+      srcset="/static/img/profile@2x.png 2x" 
+      alt="A picture of me shooting a bow and arrow, aged 7" 
+      class="profile-img" 
+      loading="lazy" />      
+      <div class="s-now-playing"><span>🎧</span><div id="np-info">Not playing anything</a></div>
+    </div>    
+  </div>
+  
 <p><span class="t-special">Rob Hough 👋</span> - I’m a product designer and coder based in Britain. Right now, I’m Head of Design for <a href="https://www.lantum.com">Lantum</a>, designing experiences for healthcare clinicians and managers. Previously I ran design at <a href="https://nuom.studio">nuom</a>, a boutique studio working in healthcare, Pharma, and life science.</p>
 
 <p>I also like to ride motorcycles in the countryside, go hiking, and hang out in the city of Nottingham with my wife, Harriet</p>    
-  </main>
-  
-     
-</div>              
-    <script src="/static/main.js" async></script>   
+  </main>                
   </body>
 </html>
 
