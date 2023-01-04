@@ -294,8 +294,7 @@ a[href^="https:"]::after {
 /* Theme Toggle */
 .theme-toggle--wrap {
 	top:0;
-	right:0;
-	display: flex;
+	right:0;	
 	padding:1rem;
 }
 .theme-toggle {
