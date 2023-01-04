@@ -1,0 +1,12 @@
+<ul>
+  {% for link in links | reverse %}  
+    <li>
+      <a href="{{ link.url }}" {% if 'http' in link.url %} rel="nofollow" {% endif %}>
+        <span>{{ link.title }}</span>
+        {% if 'http' in link.url %}
+          <img src="/static/img/external-link.svg" />
+        {% endif %}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

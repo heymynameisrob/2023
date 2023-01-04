@@ -5,12 +5,30 @@ templateClass: home
 
 <div class="l-outer l-home">  
   <main>
-    {{ content | safe }}
-  </main>
-  <footer>
-    <div class="l-container">
-      <small>&copy; 2023. Built by Rob </small>
-      <a href="/privacy-policy">Privacy Policy</a>
+    <div class="s-profile">
+      <div class="s-profile--container">
+        <img 
+        src="/static/img/profile.png" 
+        srcset="/static/img/profile@2x.png 2x" 
+        alt="A picture of me shooting a bow and arrow, aged 7" 
+        class="profile-img" 
+        loading="lazy" />
+        {# <a href="#" class="s-now-playing--toggle">🎧</a> #}
+        <div class="s-now-playing"><span>🎧</span><div id="np-info">Not playing anything</a></div>
+      </div>
+      
     </div>
-  </footer>    
+      {{ content | safe }}    
+  </main>
+  {# <aside>
+    <section>
+      <p class="aside--section-header">Latest</p>
+      {% include "links.njk" %}
+    </section>
+    <section>
+      <p class="aside--section-header">More</p>
+      
+    </section>
+  </aside> #}
+     
 </div>  

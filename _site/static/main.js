@@ -1,6 +1,7 @@
 function init(){
   setTheme();
   toggleDarkMode();
+  getNowPlaying();
 }
 
 function toggleDarkMode() {    
@@ -32,6 +33,33 @@ function setTheme(){
   } else {
     doc.setAttribute('data-theme', 'light');
   }
+}
+
+function getNowPlaying() {
+  fetch('http://localhost:5050')
+  .then(response => response.json())
+  .then(data => {
+    const { isPlaying, name, artist, title, albumImageUrl, songUrl } = data;
+    const trackInfo = document.getElementById('np-info');
+    const profileImg = document.querySelector('.profile-img');
+
+    console.log(isPlaying)
+
+    if( isPlaying ) {
+      profileImg.classList.add('is-playing');      
+    }
+
+    trackInfo.innerHTML = `
+      <a href="${songUrl}" class="marquee" target="_blank" rel="noopener noreferrer">
+        ${title} - ${artist}
+      </a>
+    `;
+    // trackImage.innerHTML = `
+    //   <a href="${songUrl}" target="_blank" rel="noopener noreferrer">
+    //     <img src="${albumImageUrl}" alt="${artist}" />
+    //   </a>
+    // `;
+  });
 }
 
 init();
