@@ -8,7 +8,7 @@ function toggleDarkMode() {
   const toggleThemeButtons = document.querySelectorAll('[data-theme-toggle]');
 
   toggleThemeButtons.forEach(button => {
-    button.addEventListener('click', function(e) {
+    button.addEventListener('click', function(e) {      
       let currentTheme = document.documentElement.getAttribute('data-theme');
 
       if( currentTheme === 'dark' ) {

@@ -28,15 +28,6 @@
   {{ css | cssmin | safe }}
 </style>
 
-<!-- capture the JS content as a Nunjucks variable -->
-{% set js %}
-  {% include "main.js" %}
-{% endset %}
-<!-- feed it through our jsmin filter to minify -->
-<script>
-  {{ js | jsmin | safe }}
-</script>
-
 <script>
     window.addEventListener("load", function(){
     window.cookieconsent.initialise({

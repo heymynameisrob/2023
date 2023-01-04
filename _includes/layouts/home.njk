@@ -12,7 +12,12 @@ templateClass: home
       alt="A picture of me shooting a bow and arrow, aged 7" 
       class="profile-img" 
       loading="lazy" />      
-      <div class="s-now-playing"><span>🎧</span><div id="np-info">Not playing anything</a></div>
+      <div class="s-now-playing">
+        {# <span>🎧</span> #}
+        {% include "np-icon.njk" %}
+        <div id="np-info">
+          <a href="#">Not playing anything</a>
+        </div>
     </div>    
   </div>
   {{ content | safe }}    
