@@ -493,6 +493,7 @@ main section h2 + p {
 	border-radius:50%;	
 	border:2px solid var(--bg-color);	
 	outline:0px solid var(--spotify-green);
+	-webkit-border-radius:50%;
 }
 .profile-img.is-playing {
 	outline: 2px solid var(--spotify-green);
