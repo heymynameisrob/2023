@@ -430,6 +430,7 @@ main section h2 + p {
 	left:-14px;
 	width: 0;
 	height: 0;
+	z-index:2;
 	border-style: solid;
 	border-width: 8px 13.9px 8px 0;
 	border-color: transparent var(--grey-50) transparent transparent;
@@ -485,18 +486,18 @@ main section h2 + p {
 .s-profile--container {
 	position:relative;
 	display:inline-flex;
+	padding:2px;
 	margin-bottom:var(--margin-y);
+	border: 2px solid var(--spotify-green);	
+	border-radius:50%;
 }
 
 .profile-img {		
 	width:6rem;
-	border-radius:50%;	
-	border:2px solid var(--bg-color);	
-	outline:0px solid var(--spotify-green);
-	-webkit-border-radius:50%;
+	border-radius:50%;		
+	background:red;	
 }
-.profile-img.is-playing {
-	outline: 2px solid var(--spotify-green);
+.is-playing {	
 	transform: scale(1);
   animation: pulse 2s infinite;
 	animation-delay: var(--animation-delay);

@@ -55,10 +55,10 @@ module.exports = function (eleventyConfig) {
     pathPrefix: "/", // useful for GitHub pages
 
     dir: {
-      input: "src/",
-      includes: "_includes/",            
-      data: "_data/",
-      output: "_site/"
+      input: "src",
+      includes: "_includes",            
+      data: "_data",
+      output: "_site"
     }
   };
 }

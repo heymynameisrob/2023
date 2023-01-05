@@ -41,7 +41,7 @@ function getNowPlaying() {
   .then(data => {
     const { isPlaying, name, artist, title, albumImageUrl, songUrl } = data;
     const trackInfo = document.getElementById('np-info');
-    const profileImg = document.querySelector('.profile-img');    
+    const profileImg = document.querySelector('.s-profile--container');    
 
     if( isPlaying ) {
       profileImg.classList.add('is-playing');      
