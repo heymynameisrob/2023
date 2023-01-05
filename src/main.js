@@ -57,8 +57,6 @@ function setTheme(){
   }
 }
 
-
-
 function getNowPlaying() {
   fetch('https://hmnir-spotify-now-playing.onrender.com/')
   .then(response => response.json())
@@ -67,10 +65,9 @@ function getNowPlaying() {
     const trackInfo = document.getElementById('np-info');
     const profileImg = document.querySelector('.s-profile--container');    
 
-    if( isPlaying ) {
-      profileImg.classList.add('is-playing');      
-    }
+    if (!isPlaying) return false;
 
+    profileImg.classList.add('is-playing');      
     trackInfo.innerHTML = `
       <a href="${songUrl}" class="marquee" target="_blank" rel="noopener noreferrer">
         ${title} - ${artist}
