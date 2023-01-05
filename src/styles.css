@@ -527,7 +527,7 @@ main section h2 + p {
   }
 }
 
-main .s-profile--container,
+main .s-profile,
 main p {
 	animation: homeFadeIn 1s ease-in;
 	animation-delay: var(--animation-delay);
