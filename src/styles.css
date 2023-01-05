@@ -525,17 +525,17 @@ main section h2 + p {
   }
 }
 
-.l-home .s-profile--container,
-.l-home p {
+main .s-profile--container,
+main p {
 	animation: homeFadeIn 1s ease-in;
 	animation-delay: var(--animation-delay);
 	animation-fill-mode: both;
 }
-.l-home p:first-of-type {
+main p:first-of-type {
 	animation-delay: calc(var(--animation-delay) + 0.25s);
 }
 
-.l-home p:last-of-type {
+main p:last-of-type {
 	animation-delay: calc(var(--animation-delay) + 0.5s);
 }
 
