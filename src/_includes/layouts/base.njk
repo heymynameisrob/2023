@@ -5,7 +5,9 @@
   </head>
   <body>  
     {% include 'theme.njk' %}
-    <div class="bg-fade"></div>
+    <div class="bg-fade">
+      <img src="/static/img/BG-Light.png" srcset="/static/img/BG-Light@2x.png 2x" alt="" class="bg-fade--img" />
+    </div>
     {{ content | safe }}     
 
     <script src="/main.js"></script>
