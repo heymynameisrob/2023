@@ -5,7 +5,7 @@ const autoprefixer = require("autoprefixer");
 
 module.exports = function (eleventyConfig) {
 
-  eleventyConfig.addPassthroughCopy("static/");
+  eleventyConfig.addPassthroughCopy("src/static");
   eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
     code,
     callback
