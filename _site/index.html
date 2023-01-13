@@ -20,44 +20,47 @@
 <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Rob Hough - Product Designer based in the UK">
 <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/styles.css">
-
+<link rel="preload" as="image" href="/static/img/bg-light.png">
+<link rel="preload" as="image" href="/static/img/bg-dark.png">
   </head>
-  <body>  
+  <body data-scroll-root>  
+      <div class="bg-fade">
+    <img src="" srcset="" alt="" class="bg-fade--img" />
+  </div>
     <div class="theme-toggle--wrap">
   <button class="sr-only" title="Toggles light & dark" aria-label="auto" aria-live="polite" data-theme-toggle>Toggle Theme</button>
   <div class="theme-toggle--button" data-theme-toggle>
-    <div class="theme-toggle--icon"></div>
-    <p>Toggle Theme</p>
+    <div class="theme-toggle--icon"></div>    
   </div>
 </div>
 
-    <div class="bg-fade">
-      <img src="/static/img/BG-Light.png" srcset="/static/img/BG-Light@2x.png 2x" alt="" class="bg-fade--img" />
-    </div>
     
-<main>  
-  <div class="s-profile">
-    <div class="s-profile--container">
-      <img 
-      src="/static/img/profile.png" 
-      srcset="/static/img/profile@2x.png 2x" 
-      alt="A picture of me shooting a bow and arrow, aged 7" 
-      class="profile-img" 
-      loading="lazy" />      
-      <div class="s-now-playing">
-        
-        <div class="np-icon--wrap">
+    
+
+    
+<main class="page-home">  
+  <div class="s-avatar--container">
+  <div class="s-avatar s-avatar--lg">
+    <img 
+    src="/static/img/profile.png" 
+    srcset="/static/img/profile@2x.png 2x" 
+    alt="A picture of me shooting a bow and arrow, aged 7" 
+    class="profile-img" 
+    loading="lazy" />      
+    <div class="s-now-playing">
+      
+      <div class="np-icon--wrap">
   <span class="np-icon">
     <span></span>
     <span></span>
     <span></span>
   </span>
 </div>
-        <div id="np-info">
-          <a href="#">Not playing anything</a>
-        </div>
-    </div>    
-  </div>
+      <div id="np-info">
+        <a href="#">Not playing anything</a>
+      </div>
+  </div>    
+</div>
   
 <p><span class="t-special">Rob Hough 👋</span> - I’m a product designer and coder based in the UK. Currently, I’m leading design at <a href="https://www.lantum.com">Lantum</a>, designing experiences for healthcare organisations and clinicians. Previously I ran design at <a href="https://nuom.studio">nuom</a>, a boutique studio working in healthcare, pharma, and life sciences.</p>
 

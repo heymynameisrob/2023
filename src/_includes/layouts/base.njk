@@ -3,11 +3,18 @@
   <head>
     {% include 'head.njk' %}
   </head>
-  <body>  
+  <body data-scroll-root>  
+    {% include "bg.njk" %}
     {% include 'theme.njk' %}
-    <div class="bg-fade">
-      <img src="/static/img/BG-Light.png" srcset="/static/img/BG-Light@2x.png 2x" alt="" class="bg-fade--img" />
-    </div>
+    
+    {% if '/post' in page.url %}
+      <nav>
+          <a href="/">
+            {% include 'avatar.njk' %}
+          </a>
+      </nav>
+    {% endif %}
+
     {{ content | safe }}     
 
     <script src="/main.js"></script>
