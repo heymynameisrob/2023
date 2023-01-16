@@ -1,5 +1,6 @@
 ---
 layout: layouts/post.njk
+date: Last modified
 title: Test Post Header
 ---
 

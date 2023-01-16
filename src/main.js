@@ -133,7 +133,7 @@ function showHideThemeToggle() {
 }
 
 function postHeaderObserver() {  
-  const postContent = document.querySelectorAll('.post-content');
+  const postContent = document.querySelectorAll('.page-post');
   const postHeader = document.querySelectorAll('.post-sticky-header');
 
   document.addEventListener('scroll', function(e) {
