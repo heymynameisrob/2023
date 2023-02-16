@@ -1,0 +1,32 @@
+<section class="block block-slider">
+  <div class="block-slider--slides">   
+    {% for image in images %}
+      {% if loop.first %}
+        <img class="block-slider--item is-active" srcset="{{ image.url }}, {{ image.url2x }} 2x" loading="lazy" alt="{{ image.alt }}" />
+      {% else %}
+        <img class="block-slider--item" data-srcset="{{ image.url }}, {{ image.url2x }} 2x" alt="{{ image.alt }}" />
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="block-slider--dots">           
+    {% for image in images %}
+      {% if loop.first %}
+        <span class="block-slider--dot is-active"></span>
+      {% else %}
+        <span class="block-slider--dot"></span>   
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="block-slider--nav">
+    <a href="#" data-nav="prev">      
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 12.0052C7 12.2643 7.10225 12.5026 7.29652 12.6891L15.3947 20.7306C15.5787 20.9067 15.8037 21 16.0695 21C16.591 21 17 20.5959 17 20.057C17 19.7979 16.8978 19.5596 16.7342 19.3834L9.29039 12.0052L16.7342 4.62694C16.8978 4.45079 17 4.22286 17 3.95333C17 3.41448 16.591 3.0104 16.0695 3.0104C15.8037 3.0104 15.5787 3.10367 15.3947 3.29011L7.29652 11.3213C7.10225 11.5181 7 11.7461 7 12.0052Z" fill="white"/>
+      </svg>
+    </a>
+    <a href="#" data-nav="next">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 11.9948C17 11.7357 16.8977 11.4974 16.7035 11.3109L8.60531 3.26943C8.42127 3.09326 8.19632 3 7.93047 3C7.409 3 7 3.40414 7 3.943C7 4.20207 7.10225 4.44041 7.26585 4.61658L14.7096 11.9948L7.26585 19.3731C7.10225 19.5492 7 19.7771 7 20.0467C7 20.5855 7.409 20.9896 7.93047 20.9896C8.19632 20.9896 8.42127 20.8963 8.60531 20.7099L16.7035 12.6787C16.8977 12.4819 17 12.2539 17 11.9948Z" fill="white"/>
+      </svg>
+    </a>
+  </div>  
+</section>

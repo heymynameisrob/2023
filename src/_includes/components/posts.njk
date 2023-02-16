@@ -1,0 +1,12 @@
+<section class="block block-posts">
+  <h2>Latest posts</h2>
+  {% for post in collections.posts | reverse %}
+  <article>
+    <div class="block-posts--main">
+      <h2>{{ post.data.title }}</h2>
+      <time>12 Jan</time>      
+    </div>
+    <a href="{{ post.url }}" class="btn btn-small">Read</a>
+  </article>
+  {% endfor %}
+</section>

@@ -3,7 +3,7 @@ function init(){
   toggleDarkMode();
   showHideThemeToggle();
   getNowPlaying();
-  funkyLinkType();
+  handleImageSlider();
   
   if(location.pathname.includes('/posts/')) {
     postHeaderObserver();
@@ -63,22 +63,20 @@ function getNowPlaying() {
   .then(response => response.json())
   .then(data => {
     const { isPlaying, name, artist, title, albumImageUrl, songUrl } = data;
-    const trackInfo = document.getElementById('np-info');
-    const profileImg = document.querySelectorAll('.s-avatar');    
+    const trackInfo = document.querySelectorAll('.np-info');
+    const profileImg = document.querySelectorAll('.s-avatar');   
+    const npBlock = document.querySelectorAll('.block-np'); 
 
     if (isPlaying !== true) {
       return false
     }
     
-    profileImg.forEach(el => el.classList.add('is-playing'));
 
-    if (location.pathname == "/") {
-      trackInfo.innerHTML = `
-        <a href="${songUrl}" class="marquee" target="_blank" rel="noopener noreferrer">
-          ${title} - ${artist}
-        </a>
-      `;
-    }
+    let content = `<a href="${songUrl}" target="_blank" rel="noopener noreferrer">${title} - ${artist}</a>`;
+        
+    npBlock.forEach(el => el.classList.add('is-playing'));
+    trackInfo.forEach(el => el.innerHTML = content);
+    
   });
 }
 
@@ -87,7 +85,7 @@ function funkyLinkType () {
   targetLink.forEach(link => {
     const isExternalLink = link.href.includes('https://');
     
-    if(!isExternalLink) return          
+    if(!isExternalLink) return false          
 
     const randomDelay = () => {
       const r = document.querySelector(':root');
@@ -148,6 +146,58 @@ function postHeaderObserver() {
   });
   
 }
+
+function handleImageSlider() {  
+  const slider = document.querySelectorAll('.block-slider--slides');
+  const sliderItems = document.querySelectorAll('.block-slider--item');
+  const sliderNav = document.querySelectorAll('.block-slider--nav a');  
+  const sliderDot = document.querySelectorAll('.block-slider--dot');
+
+  let currentSlide = 0;
+  // let slideInterval = setInterval(nextSlide, 5000);
+  
+  function nextSlide() {
+    goToSlide(currentSlide + 1);
+  }
+
+  function previousSlide() {
+    goToSlide(currentSlide - 1);
+  }
+
+  function goToSlide(n) {
+    sliderItems[currentSlide].className = 'block-slider--item';
+    sliderDot[currentSlide].className = 'block-slider--dot';
+    currentSlide = (n + sliderItems.length) % sliderItems.length;
+
+    if(sliderItems[currentSlide].dataset.srcset) {
+      let sliderItemsSrc = sliderItems[currentSlide].dataset.srcset;
+      sliderItems[currentSlide].srcset = sliderItemsSrc;
+    }
+        
+    sliderItems[currentSlide].className = 'block-slider--item is-active';    
+    sliderDot[currentSlide].className = 'block-slider--dot is-active';
+    
+  }
+
+  
+  sliderNav.forEach((el, i) => {
+    console.log(el.dataset);
+    if (el.dataset.nav == 'next') {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        nextSlide();
+      });
+    } else {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        previousSlide();
+      });
+    }
+  });
+
+}
+
+
 
 
 init();

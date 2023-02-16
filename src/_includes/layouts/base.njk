@@ -5,17 +5,7 @@
   </head>
   <body data-scroll-root>  
     {% include "bg.njk" %}
-    {% include 'theme.njk' %}
-    
-    {% if '/post' in page.url %}
-      <nav>
-          <a href="/">
-            {% include 'avatar.njk' %}
-          </a>
-      </nav>
-      {% include "post/sticky-header.njk" %}
-    {% endif %}
-
+    {% include "navbar.njk" %}
     {{ content | safe }}     
 
     <script src="/main.js"></script>

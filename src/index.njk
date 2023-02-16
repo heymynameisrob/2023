@@ -3,6 +3,8 @@ layout: layouts/home.njk
 templateClass: home
 ---
 
-<p><span class="t-special">Rob Hough 👋</span> - I’m a product designer and coder based in the UK. Currently, I’m leading design at <a href="https://www.lantum.com">Lantum</a>, designing experiences for healthcare organisations and clinicians. Previously I ran design at <a href="https://nuom.studio">nuom</a>, a boutique studio working in healthcare, pharma, and life sciences.</p>
-
-<p>I spend my time riding motorcycles across Europe, drinking real ale, and hiking in the countryside with my wife, Harriet</p>
+{% include "components/bio.njk" %}
+{% include "components/now-playing.njk" %}
+{% include "components/image-slider.njk" %}
+{# {% include "components/map.njk" %}
+{% include "components/posts.njk" %} #}
