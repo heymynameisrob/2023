@@ -3,11 +3,16 @@
   <head>
     {% include 'head.njk' %}
   </head>
-  <body data-scroll-root>  
-    {% include "bg.njk" %}
+  <body>      
     {% include "navbar.njk" %}
-    {{ content | safe }}     
+    <main class="template-{{ templateClass }}">
+      {{ content | safe }}    
+    </main>
 
+    {% if templateClass == 'post' %}
+      <link rel="stylesheet" id="prism-theme" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">            
+      <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    {% endif %}
     <script src="/main.js"></script>
               
   </body>

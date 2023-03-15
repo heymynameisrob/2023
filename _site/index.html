@@ -18,19 +18,53 @@
 <meta property="og:url" content="https://heymynamerob.com" />
 <meta property="og:image" content="https://heymynamerob.com/static/img/OG-Image.jpg" />
 <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Rob Hough - Product Designer from the UK">
-<link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/styles.css">
 <link rel="preload" as="image" href="/static/img/bg-light.png">
 <link rel="preload" as="image" href="/static/img/bg-dark.png">
   </head>
-  <body data-scroll-root>  
-      <div class="bg-fade">
-    <img src="" srcset="" alt="" class="bg-fade--img" />
+  <body>      
+    <nav> 
+  <a href="/">
+  <div class="s-avatar--container">
+    <div class="s-avatar">
+      <img 
+      src="/static/img/profile.png" 
+      srcset="/static/img/profile@2x.png 2x" 
+      alt="A picture of me shooting a bow and arrow, aged 7" 
+      class="profile-img" 
+      loading="lazy" />      
+      <div class="s-now-playing">      
+        <div class="np-icon--wrap">
+  <span class="np-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+</div>
+        <div class="np-info">
+          <span>Not playing anything</span>
+        </div>
+      </div>
+    </div>      
   </div>
-    <nav>  
-  <ul>
-    
-    <li><div class="theme-toggle--wrap">
+</a>
+  <ul>    
+    <li><a href="/posts" class="">Writing</a></li>
+    <li><a href="mailto:robhough@hey.com">Contact</a></li>
+    <li>
+      <a href="https://twitter.com/heymynameisrob" class="btn-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/heymynameisrob" class="btn-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+    </li>
+    <li><div class="theme-toggle--wrap btn-icon">
   <button class="sr-only" title="Toggles light & dark" aria-label="auto" aria-live="polite" data-theme-toggle>Toggle Theme</button>
   <div class="theme-toggle--button" data-theme-toggle>
     <div class="theme-toggle--icon"></div>    
@@ -39,104 +73,43 @@
 </li>
   </ul>  
 </nav>
-    
-<main class="masonry">  
+    <main class="template-home">
+      <header>
+  <h1 class="t-special">Hey my name is Rob 👋 </h1>
+  <p>I’m a product designer and coder based in the UK. Currently, I’m leading design at <a href="https://www.lantum.com" class="external" target="_blank" rel="noopener noreferrer">Lantum</a>, helping transform healthcare for organisations and clinicians.Previously I ran design at <a href="https://nuom.studio" class="external" target="_blank" rel="noopener noreferrer">nuom</a>, a boutique studio working in healthcare, pharma, and life sciences.</p>
+  <p>I spend my time riding motorcycles across Europe, drinking real ale, and hiking in the countryside with my wife, Harriet</p>  
+</header>
+<section>
+<h2>Latest writing</h2>
+<section class="block block-posts">  
   
-<section class="block block-bio">
- <header class="block-bio--header">
-    <div class="block-bio--header-title">
-      <div class="s-avatar--container">
-  <div class="s-avatar">
-    <img 
-    src="/static/img/profile.png" 
-    srcset="/static/img/profile@2x.png 2x" 
-    alt="A picture of me shooting a bow and arrow, aged 7" 
-    class="profile-img" 
-    loading="lazy" />      
-    <div class="s-now-playing">
-      
-      <div class="np-icon--wrap">
-  <span class="np-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </span>
-</div>
-      <div class="np-info">
-        <a href="#">Not playing anything</a>
-      </div>
-    </div>
-  </div>      
-</div>
-      <div class="block-bio--header-label">
-        <h2>@heymynameisrob</h2>
-        <p>Nottingham, UK</p>
-      </div>
-    </div>      
-  </header>
-  <p>Hey my name is Rob and I'm a product designer from the UK 👋 </p>
-  <p>Currently, I’m leading design at <a href="https://www.lantum.com" class="external" target="_blank" rel="noopener noreferrer">Lantum</a>, helping transform healthcare for organisations and clinicians.Previously I ran design at <a href="https://nuom.studio" class="external" target="_blank" rel="noopener noreferrer">nuom</a>, a boutique studio working in healthcare, pharma, and life sciences.</p>
-  <p>I spend my time riding motorcycles across Europe, drinking real ale, and hiking in the countryside with my wife, Harriet</p>
-  <a href="mailto:robhough@hey.com" class="btn btn-primary">Contact me</a>
+  <a href="/posts/design-process-portfolios/">
+    <div class="block-posts--main">
+      <div class="block-posts--meta">
+        <time>Mar 15, 2023</time>
+        <span class="badge">Thoughts</span>
+      </div>      
+      <h2>Your Design Process in your portfolio</h2>
+      <p>Interviewing a lot of designers I hear a lot of what their &#39;design process&#39; is. Usually a strict, often copy-and-paste of a HCD framework. This isn&#39;t a bad thing. But it&#39;s hard to understand their own approach when it&#39;s mired in doing &#39;what they think they should do&#39;.</p>
+    </div>    
+  </a>
+  
+  <a href="/posts/big-company-vs-small-company/">
+    <div class="block-posts--main">
+      <div class="block-posts--meta">
+        <time>Feb 4, 2021</time>
+        <span class="badge">Thoughts</span>
+      </div>      
+      <h2>Designing at a Startup vs Designing at a Big Company</h2>
+      <p>Most of my career I’ve worked for startups or small agencies. I wanted to take the leap to a bigger company, so decided to go work at a large retail brand for 2 or 3 years.</p>
+    </div>    
+  </a>
+  
 </section>
-<section class="block block-np">
-  <svg width="40" height="40" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16Z" fill="white"/>
-    <path d="M16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0ZM23.3374 23.0762C23.0508 23.5462 22.4356 23.6952 21.9655 23.4067C18.2089 21.1121 13.4798 20.5924 7.91044 21.8649C7.37375 21.9871 6.83879 21.6509 6.71651 21.114C6.59366 20.5771 6.92859 20.0422 7.46661 19.9199C13.5614 18.5274 18.7894 19.127 23.0068 21.7044C23.4768 21.9929 23.6259 22.6062 23.3374 23.0762ZM25.2957 18.7196C24.9346 19.3066 24.1666 19.4919 23.58 19.1308C19.2793 16.4873 12.7234 15.7217 7.63646 17.2659C6.97673 17.4651 6.27994 17.0933 6.07971 16.4348C5.88101 15.775 6.253 15.0796 6.91158 14.879C12.7223 13.1159 19.946 13.9699 24.8849 17.0049C25.4715 17.366 25.6568 18.1338 25.2957 18.7196ZM25.4639 14.1831C20.3072 11.1202 11.7993 10.8386 6.87585 12.3329C6.08525 12.5727 5.24917 12.1264 5.00958 11.3358C4.76999 10.5448 5.21593 9.70927 6.0071 9.46891C11.6588 7.7532 21.0542 8.08469 26.9912 11.6092C27.7038 12.0312 27.9369 12.9496 27.5147 13.6598C27.0944 14.3709 26.1727 14.6054 25.4639 14.1831Z" fill="#1ED760"/>
-  </svg>
-  <div class="block-np--body">    
-    <p class="np-info">...</p>
-  </div>
-</section>
+</section>    
+    </main>
 
-<section class="block block-slider">
-  <div class="block-slider--slides">   
     
-      
-        <img class="block-slider--item is-active" srcset="/static/img/me-la.jpg, /static/img/me-la@2x.jpg 2x" loading="lazy" alt="Me on holiday, Hollywod Bvld 2022" />
-      
-    
-      
-        <img class="block-slider--item" data-srcset="/static/img/harriet.jpg, /static/img/harriet@2x.jpg 2x" alt="My beautiful wife, Harriet, at the Grand Canyon 2022" />
-      
-    
-      
-        <img class="block-slider--item" data-srcset="/static/img/moto.jpg, /static/img/moto@2x.jpg 2x" alt="My Triumph T120 2019" />
-      
-    
-  </div>
-  <div class="block-slider--dots">           
-    
-      
-        <span class="block-slider--dot is-active"></span>
-      
-    
-      
-        <span class="block-slider--dot"></span>   
-      
-    
-      
-        <span class="block-slider--dot"></span>   
-      
-    
-  </div>
-  <div class="block-slider--nav">
-    <a href="#" data-nav="prev">      
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7 12.0052C7 12.2643 7.10225 12.5026 7.29652 12.6891L15.3947 20.7306C15.5787 20.9067 15.8037 21 16.0695 21C16.591 21 17 20.5959 17 20.057C17 19.7979 16.8978 19.5596 16.7342 19.3834L9.29039 12.0052L16.7342 4.62694C16.8978 4.45079 17 4.22286 17 3.95333C17 3.41448 16.591 3.0104 16.0695 3.0104C15.8037 3.0104 15.5787 3.10367 15.3947 3.29011L7.29652 11.3213C7.10225 11.5181 7 11.7461 7 12.0052Z" fill="white"/>
-      </svg>
-    </a>
-    <a href="#" data-nav="next">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17 11.9948C17 11.7357 16.8977 11.4974 16.7035 11.3109L8.60531 3.26943C8.42127 3.09326 8.19632 3 7.93047 3C7.409 3 7 3.40414 7 3.943C7 4.20207 7.10225 4.44041 7.26585 4.61658L14.7096 11.9948L7.26585 19.3731C7.10225 19.5492 7 19.7771 7 20.0467C7 20.5855 7.409 20.9896 7.93047 20.9896C8.19632 20.9896 8.42127 20.8963 8.60531 20.7099L16.7035 12.6787C16.8977 12.4819 17 12.2539 17 11.9948Z" fill="white"/>
-      </svg>
-    </a>
-  </div>  
-</section>
-
-      
-</main>     
-
     <script src="/main.js"></script>
               
   </body>

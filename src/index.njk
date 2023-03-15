@@ -1,10 +1,13 @@
 ---
-layout: layouts/home.njk
+layout: layouts/base.njk
 templateClass: home
 ---
-
-{% include "components/bio.njk" %}
-{% include "components/now-playing.njk" %}
-{% include "components/image-slider.njk" %}
-{# {% include "components/map.njk" %}
-{% include "components/posts.njk" %} #}
+<header>
+  <h1 class="t-special">Hey my name is Rob 👋 </h1>
+  <p>I’m a product designer and coder based in the UK. Currently, I’m leading design at <a href="https://www.lantum.com" class="external" target="_blank" rel="noopener noreferrer">Lantum</a>, helping transform healthcare for organisations and clinicians.Previously I ran design at <a href="https://nuom.studio" class="external" target="_blank" rel="noopener noreferrer">nuom</a>, a boutique studio working in healthcare, pharma, and life sciences.</p>
+  <p>I spend my time riding motorcycles across Europe, drinking real ale, and hiking in the countryside with my wife, Harriet</p>  
+</header>
+<section>
+<h2>Latest writing</h2>
+{% include "components/posts.njk" %}
+</section>

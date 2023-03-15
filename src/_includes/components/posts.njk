@@ -1,12 +1,14 @@
-<section class="block block-posts">
-  <h2>Latest posts</h2>
+<section class="block block-posts">  
   {% for post in collections.posts | reverse %}
-  <article>
+  <a href="{{ post.url }}">
     <div class="block-posts--main">
+      <div class="block-posts--meta">
+        <time>{{ post.date | postDate }}</time>
+        <span class="badge">{{ post.data.topic }}</span>
+      </div>      
       <h2>{{ post.data.title }}</h2>
-      <time>12 Jan</time>      
-    </div>
-    <a href="{{ post.url }}" class="btn btn-small">Read</a>
-  </article>
+      <p>{{ post.data.description }}</p>
+    </div>    
+  </a>
   {% endfor %}
 </section>

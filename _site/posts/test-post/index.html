@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Test Post Header</title>
-<meta name="Description" content="Found It! is a podcast all about founders and leaders of small, independent startups. We tell their against-all-odds tales, giving a voice to the thousands of visionaries build great products.">
+<title>Leading Design @ Lantum</title>
+<meta name="Description" content="Building and empowering a team of designers and researchers to help transform the working lives of healthcare professinals and their organisations">
 <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
@@ -18,18 +18,43 @@
 <meta property="og:url" content="https://heymynamerob.com" />
 <meta property="og:image" content="https://heymynamerob.com/static/img/OG-Image.jpg" />
 <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Rob Hough - Product Designer from the UK">
-<link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/styles.css">
 <link rel="preload" as="image" href="/static/img/bg-light.png">
 <link rel="preload" as="image" href="/static/img/bg-dark.png">
   </head>
-  <body data-scroll-root>  
-      <div class="bg-fade">
-    <img src="" srcset="" alt="" class="bg-fade--img" />
+  <body>      
+    <nav> 
+  <a href="/">
+  <div class="s-avatar--container">
+    <div class="s-avatar">
+      <img 
+      src="/static/img/profile.png" 
+      srcset="/static/img/profile@2x.png 2x" 
+      alt="A picture of me shooting a bow and arrow, aged 7" 
+      class="profile-img" 
+      loading="lazy" />      
+      <div class="s-now-playing">      
+        <div class="np-icon--wrap">
+  <span class="np-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+</div>
+        <div class="np-info">
+          <span>Not playing anything</span>
+        </div>
+      </div>
+    </div>      
   </div>
-    <nav>  
+</a>
   <ul>
-    
+    <li><a href="/">Home</a></li>
+    <li><a href="/posts" class="active">Writing</a></li>
+    <li><a href="mailto:robhough@hey.com">Contact</a></li>
     <li><div class="theme-toggle--wrap">
   <button class="sr-only" title="Toggles light & dark" aria-label="auto" aria-live="polite" data-theme-toggle>Toggle Theme</button>
   <div class="theme-toggle--button" data-theme-toggle>
@@ -39,57 +64,25 @@
 </li>
   </ul>  
 </nav>
-    
-<main class="page-post">      
-  <header class="post-header">
-    <h1>Test Post Header</h1>    
-    <p>Last edited on <time datetime="Last modified">Jan 15, 2023</time></p>
-    <div class="share-link--wrap">
-      <a href="#" class="share-link btn">
-        <span class="sr-only">Share post</span>
-        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.8">
-          <g clip-path="url(#clip0_4_134)">
-          <path d="M19.9307 9.41135C21.8729 7.42502 21.8729 4.20823 19.9307 2.2219C18.2119 0.464086 15.5032 0.23557 13.5266 1.68049L13.4716 1.71916C12.9766 2.08127 12.8632 2.7844 13.2172 3.28713C13.5713 3.78987 14.2588 3.9094 14.7504 3.54729L14.8054 3.50862C15.9088 2.70354 17.4179 2.8301 18.3735 3.81096C19.4563 4.91838 19.4563 6.71135 18.3735 7.81877L14.5166 11.7703C13.4338 12.8778 11.6807 12.8778 10.5979 11.7703C9.63881 10.7895 9.51506 9.24612 10.3022 8.12112L10.3401 8.06487C10.6941 7.55862 10.5772 6.85549 10.0857 6.4969C9.59412 6.1383 8.90318 6.25432 8.55256 6.75705L8.51475 6.8133C7.0985 8.83127 7.32193 11.6016 9.04068 13.3594C10.9829 15.3457 14.1282 15.3457 16.0704 13.3594L19.9307 9.41135ZM2.06943 8.5887C0.127246 10.575 0.127246 13.7918 2.06943 15.7781C3.78818 17.536 6.49693 17.7645 8.4735 16.3196L8.5285 16.2809C9.0235 15.9188 9.13693 15.2156 8.78287 14.7129C8.42881 14.2102 7.74131 14.0906 7.24975 14.4528L7.19475 14.4914C6.09131 15.2965 4.58225 15.1699 3.62662 14.1891C2.54381 13.0781 2.54381 11.2852 3.62662 10.1778L7.4835 6.22971C8.56631 5.12229 10.3194 5.12229 11.4022 6.22971C12.3613 7.21057 12.4851 8.75393 11.6979 9.88245L11.6601 9.9387C11.306 10.4449 11.4229 11.1481 11.9144 11.5067C12.406 11.8653 13.0969 11.7492 13.4476 11.2465L13.4854 11.1903C14.9016 9.16877 14.6782 6.39846 12.9594 4.64065C11.0172 2.65432 7.87193 2.65432 5.92975 4.64065L2.06943 8.5887Z" fill="var(--grey-900)"/>
-          </g>
-          <defs>
-          <clipPath id="clip0_4_134">
-          <rect width="22" height="18" fill="white"/>
-          </clipPath>
-          </defs>
-        </svg>
-        <p>Share post</p>
-      </a>
-    </div>
-  </header>
-  <section class="post-content">    
-    <div class="post-content--inner space-y space-y--lg">
-      <h2>Section title</h2>
-<p>Most of my career I’ve worked for startups or small agencies. I wanted to take the leap to a bigger company, so decided to go work at a large retail brand for 2 or 3years. It was hugely eye opening for me. It’s when I realised that the role and impact of design can differ depending on the size of your org. I quickly realised that startup life suited my personality, so jumped back to where I was.</p>
-<p>Startups and startup culture gets a lot of press. But, a lot of the design conversation is lead by folks at larger companies. These companies may call themselves “startups” but their resources, headcount and user base see them closer to a huge multi-national rather than 5 people in a basement. Furthermore, the guides on how these two roles differ and the change in focus you need to move from one to the other is hardly documented.</p>
-<p>Most of my career I’ve worked for startups or small agencies. I wanted to take the leap to a bigger company, so decided to go work at a large retail brand for 2 or 3years. It was hugely eye opening for me. It’s when I realised that the role and impact of design can differ depending on the size of your org. I quickly realised that startup life suited my personality, so jumped back to where I was.</p>
-<p>Startups and startup culture gets a lot of press. But, a lot of the design conversation is lead by folks at larger companies. These companies may call themselves “startups” but their resources, headcount and user base see them closer to a huge multi-national rather than 5 people in a basement. Furthermore, the guides on how these two roles differ and the change in focus you need to move from one to the other is hardly documented.</p>
+    <main class="template-post">
+      <header class="post-header">
+  <h1 class="t-special">Leading Design @ Lantum</h1>    
+  <h2>Building and empowering a team of designers and researchers to help transform the working lives of healthcare professinals and their organisations</h2>    
+</header>
+<div class="post-meta">
+  <time>Mar 15, 2023</time>
+  <span class="badge">Leadership</span>
+</div>  
+<section class="post-content">    
+  <div class="post-content--inner space-y space-y--lg">
+    <p>After two great years working at nuom, a consultancy working with health and wellbeing startups, I moved to Lantum.</p>
+<p>Lantum's mission is to radically transform healthcare by fixing the way healthcare professinals and their organisations work together. Essentially we are trying to solve the huge problems that exist around staffing and managaing the 4th biggest workforce in the world, the NHS. This resonates with me massively as my wife is a nurse working in the NHS and I see the effect lack of work-life balance, unsupported management, and reduced quality of life have on a person.</p>
+<p>When I joined Lantum had just raised a Series A. The main focus of this raise was to move into new markets, in particular hospitals in England and Wales (previous we'd been focused on clinics and GP surgeries) and the US. I was the first design lead hire and only non-contractor.</p>
+<p>Going in as a design lead in a startup that's going through their growth stage can be odd. You're in this middle ground between having to build and manage a team to scale design effectively across the organisation but also having a very hands-on approach. You're straddled between a Senior IC and a manager. For me, this is where I love to sit. The 'player coach' role allows me to fulfill my need for variety and challenge that I want from every job I have. However stressful it may be.</p>
 
-      <h2>Section title</h2>
-<p>Most of my career I’ve worked for startups or small agencies. I wanted to take the leap to a bigger company, so decided to go work at a large retail brand for 2 or 3years. It was hugely eye opening for me. It’s when I realised that the role and impact of design can differ depending on the size of your org. I quickly realised that startup life suited my personality, so jumped back to where I was.</p>
-<p>Startups and startup culture gets a lot of press. But, a lot of the design conversation is lead by folks at larger companies. These companies may call themselves “startups” but their resources, headcount and user base see them closer to a huge multi-national rather than 5 people in a basement. Furthermore, the guides on how these two roles differ and the change in focus you need to move from one to the other is hardly documented.</p>
-<p>Most of my career I’ve worked for startups or small agencies. I wanted to take the leap to a bigger company, so decided to go work at a large retail brand for 2 or 3years. It was hugely eye opening for me. It’s when I realised that the role and impact of design can differ depending on the size of your org. I quickly realised that startup life suited my personality, so jumped back to where I was.</p>
-<p>Startups and startup culture gets a lot of press. But, a lot of the design conversation is lead by folks at larger companies. These companies may call themselves “startups” but their resources, headcount and user base see them closer to a huge multi-national rather than 5 people in a basement. Furthermore, the guides on how these two roles differ and the change in focus you need to move from one to the other is hardly documented.</p>
-
-      <h2>Section title</h2>
-<p>Most of my career I’ve worked for startups or small agencies. I wanted to take the leap to a bigger company, so decided to go work at a large retail brand for 2 or 3years. It was hugely eye opening for me. It’s when I realised that the role and impact of design can differ depending on the size of your org. I quickly realised that startup life suited my personality, so jumped back to where I was.</p>
-<p>Startups and startup culture gets a lot of press. But, a lot of the design conversation is lead by folks at larger companies. These companies may call themselves “startups” but their resources, headcount and user base see them closer to a huge multi-national rather than 5 people in a basement. Furthermore, the guides on how these two roles differ and the change in focus you need to move from one to the other is hardly documented.</p>
-<p>Most of my career I’ve worked for startups or small agencies. I wanted to take the leap to a bigger company, so decided to go work at a large retail brand for 2 or 3years. It was hugely eye opening for me. It’s when I realised that the role and impact of design can differ depending on the size of your org. I quickly realised that startup life suited my personality, so jumped back to where I was.</p>
-<p>Startups and startup culture gets a lot of press. But, a lot of the design conversation is lead by folks at larger companies. These companies may call themselves “startups” but their resources, headcount and user base see them closer to a huge multi-national rather than 5 people in a basement. Furthermore, the guides on how these two roles differ and the change in focus you need to move from one to the other is hardly documented.</p>
-
-      <h2>Section title</h2>
-<p>Most of my career I’ve worked for startups or small agencies. I wanted to take the leap to a bigger company, so decided to go work at a large retail brand for 2 or 3years. It was hugely eye opening for me. It’s when I realised that the role and impact of design can differ depending on the size of your org. I quickly realised that startup life suited my personality, so jumped back to where I was.</p>
-<p>Startups and startup culture gets a lot of press. But, a lot of the design conversation is lead by folks at larger companies. These companies may call themselves “startups” but their resources, headcount and user base see them closer to a huge multi-national rather than 5 people in a basement. Furthermore, the guides on how these two roles differ and the change in focus you need to move from one to the other is hardly documented.</p>
-<p>Most of my career I’ve worked for startups or small agencies. I wanted to take the leap to a bigger company, so decided to go work at a large retail brand for 2 or 3years. It was hugely eye opening for me. It’s when I realised that the role and impact of design can differ depending on the size of your org. I quickly realised that startup life suited my personality, so jumped back to where I was.</p>
-<p>Startups and startup culture gets a lot of press. But, a lot of the design conversation is lead by folks at larger companies. These companies may call themselves “startups” but their resources, headcount and user base see them closer to a huge multi-national rather than 5 people in a basement. Furthermore, the guides on how these two roles differ and the change in focus you need to move from one to the other is hardly documented.</p>
-
-    </div>  
-  </section>
-  </main>     
+  </div>  
+</section>    
+    </main>
 
     <script src="/main.js"></script>
               
